@@ -1,0 +1,106 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Дуалист — 3D-туры (превью)</title><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"><style>body{margin:0}</style></head><body>
+<!-- Блок «3D-туры» для Tilda (T123 / HTML-код). Вставлять целиком. -->
+<style>
+.dl3d{--dl-green:#355048;--dl-copper:#BF9273;--dl-line:#d9d4cd;font-family:'Manrope',Arial,sans-serif;color:#000;background:#fff;padding:90px 0 100px;box-sizing:border-box}
+.dl3d *{box-sizing:border-box}
+.dl3d__wrap{max-width:1440px;margin:0 auto;padding:0 32px}
+.dl3d__head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:40px}
+.dl3d__title{font-size:50px;line-height:1.1;font-weight:400;margin:0;letter-spacing:-.01em}
+.dl3d__lead{font-size:16px;line-height:1.55;color:#6f6f6f;margin:18px 0 0;max-width:460px}
+.dl3d__tabs{display:flex;gap:10px;flex-shrink:0}
+.dl3d__tab{font:500 12px/1 'Manrope',Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em;height:40px;padding:0 20px;min-width:140px;border:1px solid var(--dl-green);background:transparent;color:var(--dl-green);cursor:pointer;border-radius:0;transition:background .25s,color .25s;white-space:nowrap}
+.dl3d__tab:hover{background:rgba(53,80,72,.08)}
+.dl3d__tab.is-active{background:var(--dl-green);color:#fff}
+.dl3d__frame{position:relative;width:100%;aspect-ratio:16/8;background:#eeebe6;overflow:hidden}
+.dl3d__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.dl3d__ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;color:#8a8a8a;letter-spacing:.02em}
+.dl3d__foot{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:24px;border-bottom:1px solid var(--dl-line);padding-bottom:24px}
+.dl3d__info{display:flex;align-items:baseline;gap:18px}
+.dl3d__num{font-size:50px;line-height:1;font-weight:400;color:#000}
+.dl3d__num span{color:var(--dl-copper);margin-right:6px}
+.dl3d__name{font-size:14px;line-height:1.4;color:#6f6f6f}
+.dl3d__name b{display:block;font-size:20px;font-weight:500;color:#000;margin-bottom:2px}
+.dl3d__full{font:600 12px/1 'Manrope',Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--dl-green);text-decoration:none;display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 20px;border:1px solid var(--dl-green);transition:background .25s,color .25s;white-space:nowrap}
+.dl3d__full:hover{background:var(--dl-green);color:#fff}
+@media (max-width:1100px){.dl3d__head{flex-direction:column;align-items:flex-start}}
+@media (max-width:640px){
+  .dl3d{padding:60px 0 70px}
+  .dl3d__wrap{padding:0 16px}
+  .dl3d__title{font-size:32px}
+  .dl3d__lead{font-size:14px}
+  .dl3d__head{gap:24px;margin-bottom:24px}
+  .dl3d__tabs{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-right:-16px;padding-right:16px}
+  .dl3d__tabs::-webkit-scrollbar{display:none}
+  .dl3d__tab{flex:0 0 auto;min-width:0;padding:0 14px;font-size:11px}
+  .dl3d__frame{aspect-ratio:3/4}
+  .dl3d__foot{flex-direction:column;align-items:flex-start}
+  .dl3d__num{font-size:36px}
+  .dl3d__full{width:100%;justify-content:center}
+}
+</style>
+
+<section class="dl3d" id="tours">
+  <div class="dl3d__wrap">
+    <div class="dl3d__head">
+      <div>
+        <h2 class="dl3d__title">3D-туры<br>по квартирам</h2>
+        <p class="dl3d__lead">Пройдитесь по квартирам онлайн: вращайте обзор и переходите между комнатами.</p>
+      </div>
+      <div class="dl3d__tabs" role="tablist">
+        <button class="dl3d__tab is-active" data-i="0" role="tab">2-комн. 64,79 м²</button>
+        <button class="dl3d__tab" data-i="1" role="tab">2-комн. 82,28 м²</button>
+        <button class="dl3d__tab" data-i="2" role="tab">3-комн. 98,76 м²</button>
+      </div>
+    </div>
+
+    <div class="dl3d__frame">
+      <div class="dl3d__ph">Загружаем 3D-тур…</div>
+    </div>
+
+    <div class="dl3d__foot">
+      <div class="dl3d__info">
+        <div class="dl3d__num"><span>//</span><em style="font-style:normal" class="dl3d__idx">01</em></div>
+        <div class="dl3d__name"><b class="dl3d__rooms">2-комнатная квартира</b><span class="dl3d__area">64,79 м²</span></div>
+      </div>
+      <a class="dl3d__full" href="https://pro3d.pro/Q1t8f4EBifp/" target="_blank" rel="noopener">Открыть на весь экран ↗</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var root=document.currentScript.previousElementSibling;
+  var tours=[
+    {id:'Q1t8f4EBifp',rooms:'2-комнатная квартира',area:'64,79 м²'},
+    {id:'sXQyyovvFjx',rooms:'2-комнатная квартира',area:'82,28 м²'},
+    {id:'7hWsmfF8jV1',rooms:'3-комнатная квартира',area:'98,76 м²'}
+  ];
+  var frame=root.querySelector('.dl3d__frame'),tabs=root.querySelectorAll('.dl3d__tab'),
+      idx=root.querySelector('.dl3d__idx'),rooms=root.querySelector('.dl3d__rooms'),
+      area=root.querySelector('.dl3d__area'),full=root.querySelector('.dl3d__full'),
+      current=0,loaded=false;
+
+  function mount(i){
+    var t=tours[i];
+    frame.innerHTML='<iframe src="https://pro3d.pro/'+t.id+'/?m='+t.id+'&play=1" allowfullscreen allow="xr-spatial-tracking; gyroscope; accelerometer; fullscreen" loading="lazy" title="3D-тур: '+t.rooms+' '+t.area+'"></iframe>';
+  }
+  function show(i){
+    current=i;
+    tabs.forEach(function(b){b.classList.toggle('is-active',+b.dataset.i===i)});
+    var t=tours[i];
+    idx.textContent=('0'+(i+1)).slice(-2);
+    rooms.textContent=t.rooms;area.textContent=t.area;
+    full.href='https://pro3d.pro/'+t.id+'/';
+    if(loaded)mount(i);
+  }
+  tabs.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.i)})});
+
+  // Тур грузится, только когда блок дошёл до экрана — не тормозит сайт
+  function start(){if(!loaded){loaded=true;mount(current)}}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){start();io.disconnect()}},{rootMargin:'300px'});
+    io.observe(frame);
+  }else start();
+})();
+</script>
+</body></html>
