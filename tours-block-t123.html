@@ -1,9 +1,9 @@
 <!-- Блок «3D-туры» для Tilda (T123 / HTML-код). Вставлять целиком. -->
 <style>
-.dl3d{--dl-green:#355048;--dl-copper:#BF9273;font-family:'Manrope',Arial,sans-serif;color:#000;background:#fff;padding:50px 0;box-sizing:border-box}
+.dl3d{--dl-green:#355048;--dl-copper:#BF9273;font-family:var(--t-headline-font,'Manrope'),Arial,sans-serif;color:#000;background:#fff;padding:50px 0;box-sizing:border-box}
 .dl3d *{box-sizing:border-box}
-.dl3d__wrap{max-width:1440px;margin:0 auto;padding:0 32px}
-.dl3d__title{font-size:40px;line-height:1.1;font-weight:400;margin:0 0 24px;letter-spacing:-.01em}
+.dl3d__wrap{padding:0 40px}
+.dl3d__title{font-family:var(--t-headline-font,'Manrope'),Arial,sans-serif;font-size:50px;line-height:1;font-weight:500;color:#000;margin:0 0 40px}
 .dl3d__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .dl3d__card{min-width:0}
 .dl3d__media{position:relative;aspect-ratio:4/3;background:#eeebe6 center/cover no-repeat;overflow:hidden;cursor:pointer}
@@ -12,10 +12,10 @@
 .dl3d__play{position:absolute;left:50%;top:50%;z-index:1;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;transition:transform .3s}
 .dl3d__media:hover .dl3d__play{transform:translate(-50%,-50%) scale(1.08)}
 .dl3d__play::before{content:'';margin-left:4px;border-style:solid;border-width:9px 0 9px 14px;border-color:transparent transparent transparent var(--dl-green)}
-.dl3d__badge{position:absolute;left:14px;top:14px;z-index:1;font:600 11px/1 'Manrope',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--dl-green);padding:8px 10px}
-.dl3d__foot{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px}
-.dl3d__name{font-size:16px;line-height:1.3;font-weight:500}
-.dl3d__area{font-size:16px;line-height:1.3;font-weight:400;color:#6f6f6f;white-space:nowrap}
+.dl3d__badge{position:absolute;left:14px;top:14px;z-index:1;font-family:var(--t-headline-font,'Manrope'),Arial,sans-serif;font-size:11px;line-height:1;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--dl-green);padding:8px 10px}
+.dl3d__foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;padding-top:16px}
+.dl3d__name{font-size:30px;line-height:1.15;font-weight:500;color:#000;text-transform:uppercase}
+.dl3d__area{font-size:30px;line-height:1.15;font-weight:500;color:var(--dl-copper);white-space:nowrap}
 .dl3d-pop{position:fixed;inset:0;z-index:99999;background:rgba(10,14,13,.94);display:none}
 .dl3d-pop.is-open{display:block}
 .dl3d-pop iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -24,12 +24,11 @@
 .dl3d-pop__close::before,.dl3d-pop__close::after{content:'';position:absolute;left:50%;top:50%;width:18px;height:2px;background:#355048;transform:translate(-50%,-50%) rotate(45deg)}
 .dl3d-pop__close::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .dl3d-lock{overflow:hidden}
-@media (max-width:900px){.dl3d__grid{gap:12px}.dl3d__name,.dl3d__area{font-size:14px}}
+@media (max-width:1199px){.dl3d__wrap{padding:0 20px}.dl3d__grid{gap:12px}.dl3d__name,.dl3d__area{font-size:20px}}
 @media (max-width:640px){
   .dl3d{padding:36px 0}
-  .dl3d__wrap{padding:0 16px}
-  .dl3d__title{font-size:28px;margin-bottom:16px}
-  .dl3d__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:0 16px}
+  .dl3d__title{font-size:30px;margin-bottom:24px}
+  .dl3d__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -20px;padding:0 20px;scroll-padding:0 20px}
   .dl3d__grid::-webkit-scrollbar{display:none}
   .dl3d__card{flex:0 0 82%;scroll-snap-align:start}
   .dl3d__media{aspect-ratio:4/5}
@@ -44,22 +43,22 @@
       <div class="dl3d__card" data-id="Q1t8f4EBifp">
         <div class="dl3d__media" role="button" tabindex="0" aria-label="Запустить 3D-тур: 2-комнатная квартира 64,79 м²"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
         <div class="dl3d__foot">
-          <div class="dl3d__name">2-комнатная квартира</div>
-          <div class="dl3d__area">64,79 м²</div>
+          <div class="dl3d__name">2К квартира</div>
+          <div class="dl3d__area">// 64,79 м²</div>
         </div>
       </div>
       <div class="dl3d__card" data-id="sXQyyovvFjx">
         <div class="dl3d__media" role="button" tabindex="0" aria-label="Запустить 3D-тур: 2-комнатная квартира 82,28 м²"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
         <div class="dl3d__foot">
-          <div class="dl3d__name">2-комнатная квартира</div>
-          <div class="dl3d__area">82,28 м²</div>
+          <div class="dl3d__name">2К квартира</div>
+          <div class="dl3d__area">// 82,28 м²</div>
         </div>
       </div>
       <div class="dl3d__card" data-id="7hWsmfF8jV1">
         <div class="dl3d__media" role="button" tabindex="0" aria-label="Запустить 3D-тур: 3-комнатная квартира 98,76 м²"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
         <div class="dl3d__foot">
-          <div class="dl3d__name">3-комнатная квартира</div>
-          <div class="dl3d__area">98,76 м²</div>
+          <div class="dl3d__name">3К квартира</div>
+          <div class="dl3d__area">// 98,76 м²</div>
         </div>
       </div>
     </div>
