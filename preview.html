@@ -20,6 +20,7 @@
 .dl3d__area{font-size:20px;line-height:1.2;font-weight:500;color:var(--dl-copper);white-space:nowrap}
 .dl3d__go{flex:0 0 auto;height:40px;padding:0 16px;display:flex;align-items:center;gap:10px;background:transparent;border:1px solid var(--dl-green);color:var(--dl-green);font-size:12px;line-height:1;font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;transition:background .25s,color .25s}
 .dl3d__go svg{width:14px;height:14px;transition:transform .25s}
+.dl3d__name{flex:0 1 auto}.dl3d__area{margin-left:auto}.dl3d__go{flex:1 1 100%;justify-content:space-between}
 .dl3d__card:hover .dl3d__go,.dl3d__card:focus-visible .dl3d__go{background:var(--dl-green);color:#fff}
 .dl3d__card:hover .dl3d__go svg{transform:translate(2px,-2px)}
 .dl3d-pop{position:fixed;inset:0;z-index:99999;background:rgba(10,14,13,.94);display:none}
@@ -30,7 +31,6 @@
 .dl3d-pop__close::before,.dl3d-pop__close::after{content:'';position:absolute;left:50%;top:50%;width:18px;height:2px;background:#355048;transform:translate(-50%,-50%) rotate(45deg)}
 .dl3d-pop__close::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .dl3d-lock{overflow:hidden}
-@media (max-width:1439px){.dl3d__name{flex:0 1 auto}.dl3d__area{margin-left:auto}.dl3d__go{flex:1 1 100%;justify-content:space-between}}
 @media (max-width:1199px){.dl3d__wrap{padding:0 20px}.dl3d__grid{gap:12px}.dl3d__foot{gap:12px}.dl3d__name,.dl3d__area{font-size:16px}}
 @media (max-width:640px){
   .dl3d{padding:36px 0}
