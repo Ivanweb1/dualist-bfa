@@ -5,17 +5,22 @@
 .dl3d__wrap{padding:0 40px}
 .dl3d__title{font-family:var(--t-headline-font,'Manrope'),Arial,sans-serif;font-size:50px;line-height:1;font-weight:500;color:#000;margin:0 0 40px}
 .dl3d__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.dl3d__card{min-width:0}
+.dl3d__card{min-width:0;cursor:pointer;outline:none}
+.dl3d__card:focus-visible .dl3d__media{outline:2px solid var(--dl-green);outline-offset:3px}
 .dl3d__media{position:relative;aspect-ratio:4/3;background:#eeebe6 center/cover no-repeat;overflow:hidden;cursor:pointer}
 .dl3d__media::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.12);transition:background .3s}
-.dl3d__media:hover::after{background:rgba(0,0,0,.25)}
+.dl3d__card:hover .dl3d__media::after{background:rgba(0,0,0,.25)}
 .dl3d__play{position:absolute;left:50%;top:50%;z-index:1;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;transition:transform .3s}
-.dl3d__media:hover .dl3d__play{transform:translate(-50%,-50%) scale(1.08)}
+.dl3d__card:hover .dl3d__play{transform:translate(-50%,-50%) scale(1.08)}
 .dl3d__play::before{content:'';margin-left:4px;border-style:solid;border-width:9px 0 9px 14px;border-color:transparent transparent transparent var(--dl-green)}
 .dl3d__badge{position:absolute;left:14px;top:14px;z-index:1;font-family:var(--t-headline-font,'Manrope'),Arial,sans-serif;font-size:11px;line-height:1;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--dl-green);padding:8px 10px}
-.dl3d__foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;padding-top:16px}
-.dl3d__name{font-size:30px;line-height:1.15;font-weight:500;color:#000;text-transform:uppercase}
-.dl3d__area{font-size:30px;line-height:1.15;font-weight:500;color:var(--dl-copper);white-space:nowrap}
+.dl3d__foot{display:flex;align-items:center;gap:16px;padding-top:16px}
+.dl3d__name{flex:1;min-width:0;font-size:20px;line-height:1.2;font-weight:500;color:#000;text-transform:uppercase}
+.dl3d__area{font-size:20px;line-height:1.2;font-weight:500;color:var(--dl-copper);white-space:nowrap}
+.dl3d__go{flex:0 0 auto;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--dl-green);color:#fff;transition:background .25s}
+.dl3d__go svg{width:16px;height:16px;transition:transform .25s}
+.dl3d__card:hover .dl3d__go{background:var(--dl-copper)}
+.dl3d__card:hover .dl3d__go svg{transform:translate(2px,-2px)}
 .dl3d-pop{position:fixed;inset:0;z-index:99999;background:rgba(10,14,13,.94);display:none}
 .dl3d-pop.is-open{display:block}
 .dl3d-pop iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -24,7 +29,7 @@
 .dl3d-pop__close::before,.dl3d-pop__close::after{content:'';position:absolute;left:50%;top:50%;width:18px;height:2px;background:#355048;transform:translate(-50%,-50%) rotate(45deg)}
 .dl3d-pop__close::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .dl3d-lock{overflow:hidden}
-@media (max-width:1199px){.dl3d__wrap{padding:0 20px}.dl3d__grid{gap:12px}.dl3d__name,.dl3d__area{font-size:20px}}
+@media (max-width:1199px){.dl3d__wrap{padding:0 20px}.dl3d__grid{gap:12px}.dl3d__foot{gap:12px}.dl3d__name,.dl3d__area{font-size:16px}.dl3d__go{width:36px;height:36px}}
 @media (max-width:640px){
   .dl3d{padding:36px 0}
   .dl3d__title{font-size:30px;margin-bottom:24px}
@@ -40,25 +45,28 @@
   <div class="dl3d__wrap">
     <h2 class="dl3d__title">3D-туры по квартирам</h2>
     <div class="dl3d__grid">
-      <div class="dl3d__card" data-id="Q1t8f4EBifp">
-        <div class="dl3d__media" role="button" tabindex="0" aria-label="Запустить 3D-тур: 2-комнатная квартира 64,79 м²"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
+      <div class="dl3d__card" data-id="Q1t8f4EBifp" role="button" tabindex="0" aria-label="Запустить 3D-тур: 2-комнатная квартира 64,79 м²">
+        <div class="dl3d__media"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
         <div class="dl3d__foot">
           <div class="dl3d__name">2К квартира</div>
           <div class="dl3d__area">// 64,79 м²</div>
+          <span class="dl3d__go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></span>
         </div>
       </div>
-      <div class="dl3d__card" data-id="sXQyyovvFjx">
-        <div class="dl3d__media" role="button" tabindex="0" aria-label="Запустить 3D-тур: 2-комнатная квартира 82,28 м²"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
+      <div class="dl3d__card" data-id="sXQyyovvFjx" role="button" tabindex="0" aria-label="Запустить 3D-тур: 2-комнатная квартира 82,28 м²">
+        <div class="dl3d__media"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
         <div class="dl3d__foot">
           <div class="dl3d__name">2К квартира</div>
           <div class="dl3d__area">// 82,28 м²</div>
+          <span class="dl3d__go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></span>
         </div>
       </div>
-      <div class="dl3d__card" data-id="7hWsmfF8jV1">
-        <div class="dl3d__media" role="button" tabindex="0" aria-label="Запустить 3D-тур: 3-комнатная квартира 98,76 м²"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
+      <div class="dl3d__card" data-id="7hWsmfF8jV1" role="button" tabindex="0" aria-label="Запустить 3D-тур: 3-комнатная квартира 98,76 м²">
+        <div class="dl3d__media"><span class="dl3d__badge">3D-тур</span><span class="dl3d__play"></span></div>
         <div class="dl3d__foot">
           <div class="dl3d__name">3К квартира</div>
           <div class="dl3d__area">// 98,76 м²</div>
+          <span class="dl3d__go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></span>
         </div>
       </div>
     </div>
@@ -100,9 +108,9 @@
     var id=card.dataset.id, media=card.querySelector('.dl3d__media');
     // Обложка тура с pro3d; сам тур грузится только по клику
     media.style.backgroundImage='url(https://cdn.pro3d.pro/'+id+'/preview.jpg)';
-    function start(){open(id,media.getAttribute('aria-label'),media)}
-    media.addEventListener('click',start);
-    media.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();start()}});
+    function start(){open(id,card.getAttribute('aria-label'),card)}
+    card.addEventListener('click',start);
+    card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();start()}});
   });
 })();
 </script>
